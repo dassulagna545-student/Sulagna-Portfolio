@@ -1,0 +1,4086 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --bg: #02080d;
+    --panel: #071827;
+    --panel-light: #0a2033;
+
+    --blue: #1d9bf0;
+    --blue-light: #54bfff;
+    --blue-dark: #0876c9;
+
+    --white: #f2f6fa;
+    --text: #aebdcb;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px;
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+    width: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    padding: 25px 7%;
+}
+
+
+nav {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Navigation List */
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+}
+
+
+nav ul li a {
+    position: relative;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+
+nav ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 0;
+    bottom: -8px;
+
+    background: var(--blue);
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: var(--white);
+}
+
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(0, 169, 244, 0.35);
+
+    background: rgba(0, 169, 244, 0.05);
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 20px rgba(0, 169, 244, 0.08);
+}
+
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #2ecc71;
+
+    animation: pulseDot 1.8s infinite;
+}
+
+
+@keyframes pulseDot {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(46, 204, 113, 0.5);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 7px rgba(46, 204, 113, 0);
+    }
+
+}
+
+
+/* =========================================
+   HOME SECTION
+========================================= */
+
+.home {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        130px 10%
+        70px;
+
+    overflow: visible;
+
+    background:
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(25, 132, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 35% 65%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        );
+}
+
+/* Extra Background Glow */
+
+.home-glow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -180px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 119, 255, 0.13);
+
+    filter: blur(120px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HOME CONTENT
+========================================= */
+
+.home-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 55%;
+
+    max-width: 720px;
+}
+
+
+/* Welcome */
+
+.welcome {
+    color: #70c7ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 0 18px rgba(0, 169, 244, 0.25);
+}
+
+
+/* Hello */
+
+.hello-text {
+    color: var(--white);
+
+    font-size: 28px;
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+
+/* =========================================
+   ANIMATED NAME
+========================================= */
+
+.name-animation {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    font-size: clamp(65px, 7vw, 110px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -4px;
+
+    /* Prevent bottom of letters like "g" from being clipped */
+    padding-bottom: 12px;
+
+    overflow: visible;
+}
+
+
+.name-animation span {
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #d9efff 25%,
+            #229dff 50%,
+            #78caff 75%,
+            #ffffff 100%
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    line-height: 1.15;
+
+    padding-bottom: 8px;
+
+    animation:
+        nameGlow 5s linear infinite;
+
+    text-shadow:
+        0 0 25px rgba(0, 140, 255, 0.15);
+}
+
+
+@keyframes nameGlow {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 250% center;
+    }
+
+}
+
+/* =========================================
+   ROLE
+========================================= */
+
+.home h2 {
+    color: var(--white);
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    line-height: 1.55;
+
+    margin-bottom: 22px;
+}
+
+
+.home h2 span {
+    color: var(--blue-light);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    width: 100%;
+
+    max-width: 650px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+
+    padding: 14px 28px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease;
+}
+
+
+/* Primary Button */
+
+.primary {
+    color: #001018;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42baff,
+            #168bd6
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0, 140, 255, 0.18);
+}
+
+
+.primary:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 140, 255, 0.35);
+}
+
+
+/* Secondary Button */
+
+.secondary {
+    color: #001018;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42baff,
+            #168bd6
+        );
+
+    border: 1px solid #42baff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 140, 255, 0.18);
+}
+
+.secondary:hover {
+    transform: translateY(-5px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #54c4ff,
+            #2299e5
+        );
+
+    box-shadow:
+        0 16px 35px rgba(0, 140, 255, 0.35);
+}
+
+
+.secondary:hover {
+    transform: translateY(-5px);
+
+    background:
+        rgba(0, 119, 255, 0.15);
+
+    box-shadow:
+        0 15px 35px rgba(0, 119, 255, 0.18);
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 50px;
+}
+
+
+.social-links a {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0, 169, 244, 0.55);
+
+    color: var(--blue-light);
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+
+    background:
+        rgba(0, 169, 244, 0.03);
+}
+
+
+.social-links a:hover {
+    color: #001018;
+
+    background: var(--blue-light);
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 169, 244, 0.25);
+}
+
+
+
+/* =========================================
+   PHOTO AREA
+========================================= */
+
+.home-image {
+    position: absolute;
+
+    z-index: 4;
+
+    right: 10%;
+    top: 50%;
+
+    width: min(33vw, 500px);
+
+    aspect-ratio: 0.8;
+
+    /* Reference shape: curved top corners + softer bottom corners */
+    border-radius: 70px 70px 35px 35px;
+
+    overflow: visible;
+
+    /* Gentle floating motion */
+    animation: floatPhoto 5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FLOATING PHOTO
+========================================= */
+
+@keyframes floatPhoto {
+
+    0%,
+    100% {
+        transform: translateY(-45%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+}
+
+
+/* =========================================
+   MOVING LIGHT ON THIN PHOTO BORDER
+========================================= */
+
+.home-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius:
+        72px 72px 37px 37px;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 335deg,
+            #0876c9 345deg,
+            #ffffff 352deg,
+            #54bfff 357deg,
+            transparent 360deg
+        );
+
+    padding: 2px;
+
+    animation:
+        borderLight 3s linear infinite;
+
+    z-index: 2;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    filter: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTINUOUS BORDER LIGHT
+========================================= */
+
+@keyframes borderLight {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   ACTUAL IMAGE
+========================================= */
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border:
+        7px solid rgba(50, 168, 255, 0.85);
+
+    border-radius:
+        70px 70px 35px 35px;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow:
+        0 0 18px rgba(0, 140, 255, 0.38),
+        0 0 45px rgba(0, 119, 255, 0.18);
+
+    filter:
+        brightness(1.08)
+        contrast(1.04)
+        saturate(1.05);
+}
+
+/* =========================================
+   SKILLS SECTION
+========================================= */
+#skills.skills-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding:
+        110px 8%
+        100px;
+
+    overflow: hidden;
+
+    /* SAME DARK THEME AS HOME */
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.15),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 30% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+}
+/* =========================================
+   SKILLS TITLE - SAME AS EDUCATION
+========================================= */
+
+.skills-title {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--white);
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 700;
+
+    margin-bottom: 70px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation:
+        skillsGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   SKILLS GLOW ANIMATION
+========================================= */
+
+@keyframes skillsGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 10px rgba(0, 169, 244, 0.65),
+            0 0 25px rgba(0, 169, 244, 0.35),
+            0 0 45px rgba(0, 169, 244, 0.18);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px rgba(0, 169, 244, 0.9),
+            0 0 35px rgba(0, 169, 244, 0.6),
+            0 0 65px rgba(0, 169, 244, 0.4);
+    }
+}
+
+
+/* Skills Grid */
+
+.skills-grid {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 18px;
+
+    justify-content: center;
+}
+
+
+/* Skill Card */
+
+.skill-card {
+    min-height: 180px;
+
+    padding: 25px 12px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 40, 49, 0.98),
+            rgba(22, 27, 35, 0.98)
+        );
+
+    border:
+        1px solid rgba(91, 120, 150, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Skill Icons */
+
+.skill-card i {
+    font-size: 3.5rem;
+
+    color: #4d8cff;
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(38, 119, 255, 0.3)
+        );
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* Skill Text */
+
+.skill-card h3 {
+    color: var(--white);
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    line-height: 1.3;
+}
+
+
+/* Skill Hover */
+
+.skill-card:hover {
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0, 150, 255, 0.85);
+
+    box-shadow:
+        0 0 20px rgba(0, 119, 255, 0.25),
+        0 0 45px rgba(0, 119, 255, 0.12),
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+.skill-card:hover i {
+    color: #76b8ff;
+
+    transform:
+        scale(1.12);
+}
+
+
+/* =========================================
+   DEFAULT SECTION STYLE
+   Exclude sections with their own theme
+========================================= */
+
+section:not(.home):not(.skills-section):not(.education-section):not(.internship-section):not(#projects) {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding:
+        120px 10%
+        100px;
+
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        var(--panel);
+
+    background-size:
+        55px 55px,
+        55px 55px;
+}
+
+
+section:not(.home):not(.skills-section) h2 {
+    text-align: center;
+
+    font-size:
+        clamp(40px, 5vw, 65px);
+
+    margin-bottom: 50px;
+
+    color: var(--white);
+}
+
+
+section:not(.home):not(.skills-section) h2 span {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    nav ul {
+        gap: 20px;
+    }
+
+
+    .home {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+
+    .home-content {
+        width: 58%;
+    }
+
+
+    .home-image {
+        right: 5%;
+
+        width: min(35vw, 450px);
+    }
+
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        position: relative;
+
+        padding:
+            22px 5%;
+    }
+
+
+    nav {
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+
+    nav ul {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+
+    .home {
+        min-height: auto;
+
+        padding:
+            70px 8%
+            80px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .home-content {
+        width: 100%;
+
+        max-width: 700px;
+    }
+
+
+    .welcome {
+        margin-top: 20px;
+    }
+
+
+    .name-animation {
+        justify-content: center;
+    }
+
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .buttons {
+        justify-content: center;
+    }
+
+
+    .social-links {
+        justify-content: center;
+    }
+
+
+    .home-image {
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        transform: none;
+
+        width: min(70vw, 460px);
+
+        margin-top: 70px;
+
+        animation:
+            floatPhotoMobile 5s ease-in-out infinite;
+    }
+
+
+    @keyframes floatPhotoMobile {
+
+        0%,
+        100% {
+            transform:
+                translateY(0);
+        }
+
+        50% {
+            transform:
+                translateY(-18px);
+        }
+
+    }
+
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    header {
+        padding:
+            18px 20px;
+    }
+
+
+    nav ul {
+        gap: 12px 18px;
+    }
+
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+
+    .status-badge {
+        font-size: 11px;
+
+        padding:
+            8px 15px;
+    }
+
+
+    .home {
+        padding:
+            55px 7%
+            70px;
+    }
+
+
+    .welcome {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .hello-text {
+        font-size: 22px;
+    }
+
+
+    .name-animation {
+        font-size:
+            clamp(52px, 15vw, 75px);
+
+        gap: 10px;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+
+    .intro {
+        font-size: 13px;
+
+        line-height: 1.9;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 14px;
+    }
+
+
+    .btn {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+
+    .social-links {
+        margin-top: 35px;
+    }
+
+
+    .home-image {
+        width: min(85vw, 390px);
+
+        margin-top: 55px;
+
+        border-radius:
+            50px 50px 25px 25px;
+    }
+
+
+    .home-image::before {
+        border-radius: 52px 52px 27px 27px;
+    }
+
+    .home-image img {
+        border-width: 5px;
+
+        border-radius:
+            50px 50px 25px 25px;
+    }
+
+
+    .skills-section {
+        padding:
+            90px 6%
+            70px !important;
+    }
+
+
+    .skills-title {
+        margin-bottom: 50px;
+    }
+
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .skill-card {
+        min-height: 155px;
+
+        border-radius: 24px;
+
+        gap: 15px;
+    }
+
+
+    .skill-card i {
+        font-size: 2.8rem;
+    }
+
+
+    .skill-card h3 {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .skills-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .name-animation {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+
+    .skill-card {
+        min-height: 145px;
+    }
+
+}
+/* =========================================
+   REMOVE MOVING LINE FROM PHOTO
+========================================= */
+
+.home-image::before {
+    display: none !important;
+}
+/* =========================================
+   DOWNLOAD RESUME - SAME AS VIEW PROJECTS
+========================================= */
+
+.secondary {
+    color: #001018 !important;
+
+    background: linear-gradient(
+        135deg,
+        #42baff,
+        #168bd6
+    ) !important;
+
+    border: none !important;
+
+    box-shadow:
+        0 10px 30px rgba(0, 140, 255, 0.18) !important;
+
+    outline: none !important;
+}
+
+
+/* Hover */
+.secondary:hover {
+    color: #001018 !important;
+
+    background: linear-gradient(
+        135deg,
+        #42baff,
+        #168bd6
+    ) !important;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 140, 255, 0.35) !important;
+}
+
+
+/* Click / Focus / Selected */
+.secondary:focus,
+.secondary:active,
+.secondary:visited {
+    color: #001018 !important;
+
+    background: linear-gradient(
+        135deg,
+        #42baff,
+        #168bd6
+    ) !important;
+
+    border: none !important;
+
+    outline: none !important;
+}
+/* =========================================
+   EDUCATION SECTION
+========================================= */
+
+#education.education-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        110px 8%
+        100px;
+
+    overflow: hidden;
+
+    /* SAME WEBSITE THEME */
+    background:
+
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.14),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+}
+
+
+/* =========================================
+   EDUCATION TITLE - SAME AS SKILLS
+========================================= */
+
+.education-title {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--blue);
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 700;
+
+    margin-bottom: 80px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation:
+        educationGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   SAME GLOW ANIMATION
+========================================= */
+
+@keyframes educationGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 10px rgba(0, 169, 244, 0.65),
+            0 0 25px rgba(0, 169, 244, 0.35),
+            0 0 45px rgba(0, 169, 244, 0.18);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px rgba(0, 169, 244, 0.9),
+            0 0 35px rgba(0, 169, 244, 0.6),
+            0 0 65px rgba(0, 169, 244, 0.4);
+    }
+
+}
+
+
+/* =========================================
+   EDUCATION TIMELINE
+========================================= */
+
+.education-timeline {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding-left: 40px;
+}
+
+
+/* Vertical Line */
+
+/* =========================================
+   EDUCATION TIMELINE LINE
+========================================= */
+
+.education-timeline {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding-left: 40px;
+}
+
+
+/* Main vertical line */
+
+.education-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 15px;
+    bottom: 15px;
+
+    width: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(21, 156, 255, 0.25),
+        #159cff,
+        rgba(21, 156, 255, 0.25)
+    );
+
+    box-shadow:
+        0 0 8px rgba(0, 180, 255, 0.55),
+        0 0 18px rgba(0, 140, 255, 0.25);
+}
+/* =========================================
+   CONTINUOUS FLOWING GLOW
+========================================= */
+
+.education-timeline::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -4px;
+
+    top: 15px;
+
+    width: 10px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 220, 255, 0.25) 15%,
+        #ffffff 45%,
+        #00d9ff 60%,
+        rgba(0, 180, 255, 0.25) 85%,
+        transparent 100%
+    );
+
+    filter:
+        blur(2px);
+
+    box-shadow:
+        0 0 8px #00d9ff,
+        0 0 18px #00bfff,
+        0 0 35px rgba(0, 190, 255, 0.8);
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    animation:
+        timelineFlow 3s linear infinite;
+}
+
+
+/* =========================================
+   FLOW ANIMATION
+========================================= */
+
+@keyframes timelineFlow {
+
+    0% {
+        top: 15px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        top: calc(100% - 105px);
+        opacity: 0;
+    }
+
+}
+
+/* =========================================
+   EDUCATION ITEM
+========================================= */
+
+.education-item {
+
+    position: relative;
+
+    margin-bottom: 60px;
+
+    padding-left: 0;
+}
+
+
+/* =========================================
+   GLOWING DOT
+========================================= */
+
+.education-dot {
+
+    position: absolute;
+
+    left: -49px;
+
+    top: 25px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #42baff;
+
+    border:
+        3px solid #159cff;
+
+    box-shadow:
+
+        0 0 8px #159cff,
+
+        0 0 18px #159cff,
+
+        0 0 35px rgba(0, 174, 255, 0.7);
+
+    z-index: 3;
+
+    animation:
+        educationPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes educationPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 8px #159cff,
+            0 0 18px #159cff,
+            0 0 35px rgba(0, 174, 255, 0.7);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 12px #42baff,
+            0 0 28px #159cff,
+            0 0 50px rgba(0, 174, 255, 0.9);
+
+    }
+
+}
+
+
+/* =========================================
+   EDUCATION CARD
+========================================= */
+
+.education-card {
+
+    position: relative;
+
+    padding:
+        28px 30px;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(5, 30, 58, 0.96),
+            rgba(3, 19, 39, 0.96)
+        );
+
+    border:
+        1px solid rgba(20, 157, 255, 0.65);
+
+    box-shadow:
+
+        0 10px 35px rgba(0, 0, 0, 0.28),
+
+        inset 0 0 25px rgba(0, 140, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.education-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(50, 178, 255, 0.95);
+
+    box-shadow:
+
+        0 0 20px rgba(0, 140, 255, 0.25),
+
+        0 0 45px rgba(0, 119, 255, 0.12),
+
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+.education-year {
+
+    color:
+        #27aaff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        12px;
+
+    letter-spacing:
+        0.3px;
+}
+
+
+/* =========================================
+   DEGREE
+========================================= */
+
+.education-card h3 {
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(20px, 2vw, 24px);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+    margin-bottom:
+        14px;
+}
+
+
+/* =========================================
+   UNIVERSITY
+========================================= */
+
+.education-university {
+
+    color:
+        #c6d9ea;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.6;
+
+    margin-bottom:
+        7px;
+}
+
+
+/* =========================================
+   COLLEGE / SCHOOL
+========================================= */
+
+.education-college {
+
+    color:
+        #7fa8c9;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+    margin-bottom:
+        7px;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.education-details {
+
+    color:
+        #8eafc9;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+    margin-top:
+        5px;
+}
+
+
+.education-details span {
+
+    color:
+        #27b4ff;
+
+    font-weight:
+        700;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.3);
+}
+ /* =========================================
+   PROJECTS SECTION
+   SAME THEME + SAME HEADING ANIMATION AS EDUCATION
+========================================= */
+
+#projects {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 110px 8% 100px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    /* EXACT WEBSITE THEME */
+    background:
+
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.14),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+}
+
+
+/* =========================================
+   PROJECTS TITLE
+   EXACT SAME AS EDUCATION
+========================================= */
+
+#projects .education-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);   /* এই লাইনটা change করতে হবে */
+    font-size: clamp(45px, 5vw, 70px);
+    font-weight: 700;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+    animation:
+        educationGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PROJECTS CONTAINER
+========================================= */
+
+.projects-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   PROJECT CARD
+   SAME DARK BLUE STYLE AS EDUCATION CARD
+========================================= */
+
+.project-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(5, 30, 58, 0.96),
+            rgba(3, 19, 39, 0.96)
+        );
+
+    border:
+        1px solid rgba(20, 157, 255, 0.65);
+
+    box-shadow:
+
+        0 10px 35px rgba(0, 0, 0, 0.28),
+
+        inset 0 0 25px rgba(0, 140, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   PROJECT CARD HOVER
+   SAME STYLE AS EDUCATION CARD
+========================================= */
+
+.project-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(50, 178, 255, 0.95);
+
+    box-shadow:
+
+        0 0 20px rgba(0, 140, 255, 0.25),
+
+        0 0 45px rgba(0, 119, 255, 0.12),
+
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   DASHBOARD IMAGE
+========================================= */
+
+.project-image {
+
+    width: 100%;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    background: #02080d;
+
+    border-bottom:
+        1px solid rgba(20, 157, 255, 0.45);
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.project-card:hover .project-image img {
+
+    transform:
+        scale(1.025);
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+========================================= */
+
+.project-content {
+
+    padding:
+        30px;
+}
+
+
+/* =========================================
+   PROJECT NAME
+========================================= */
+
+.project-content h3 {
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(24px, 3vw, 30px);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+    margin-bottom:
+        15px;
+
+    text-shadow:
+        0 0 15px rgba(0, 169, 244, 0.12);
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+========================================= */
+
+.project-content p {
+
+    color:
+        var(--text);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+    margin-bottom:
+        15px;
+}
+
+
+/* =========================================
+   PROJECT TOOLS
+========================================= */
+
+.project-tools {
+
+    color:
+        #27b4ff !important;
+
+    font-size:
+        14px !important;
+
+    line-height:
+        1.8;
+
+    margin-top:
+        10px;
+
+    margin-bottom:
+        20px !important;
+}
+
+
+.project-tools strong {
+
+    color:
+        var(--white);
+}
+
+
+/* =========================================
+   PROJECT BUTTONS
+========================================= */
+
+.project-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   PROJECT BUTTON
+========================================= */
+
+.project-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding:
+        12px 22px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   PRIMARY PROJECT BUTTON
+   SAME BLUE STYLE AS WEBSITE
+========================================= */
+
+.project-btn.primary {
+
+    color:
+        #001018;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42baff,
+            #168bd6
+        );
+
+    border:
+        1px solid transparent;
+
+    box-shadow:
+        0 10px 30px rgba(0, 140, 255, 0.18);
+}
+
+
+.project-btn.primary:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #54c4ff,
+            #2299e5
+        );
+
+    box-shadow:
+        0 16px 35px rgba(0, 140, 255, 0.35);
+}
+
+
+/* =========================================
+   SECONDARY PROJECT BUTTON
+========================================= */
+
+.project-btn.secondary {
+
+    color:
+        #42baff;
+
+    background:
+        rgba(0, 169, 244, 0.03);
+
+    border:
+        1px solid rgba(66, 186, 255, 0.65);
+
+    box-shadow:
+        0 8px 25px rgba(0, 119, 255, 0.08);
+}
+
+
+.project-btn.secondary:hover {
+
+    color:
+        #001018;
+
+    background:
+        #42baff;
+
+    border-color:
+        #42baff;
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 140, 255, 0.30);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #projects {
+
+        padding:
+            90px 5%
+            70px;
+    }
+
+
+    #projects .education-title {
+
+        font-size:
+            clamp(40px, 12vw, 55px);
+
+        margin-bottom:
+            55px;
+    }
+
+
+    .project-image {
+
+        height:
+            250px;
+    }
+
+
+    .project-content {
+
+        padding:
+            22px;
+    }
+
+
+    .project-content h3 {
+
+        font-size:
+            23px;
+    }
+
+
+    .project-content p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.8;
+    }
+
+
+    .project-tools {
+
+        font-size:
+            13px !important;
+    }
+
+
+    .project-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            12px;
+    }
+
+
+    .project-btn {
+
+        width:
+            100%;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    #projects {
+
+        padding:
+            80px 5%
+            60px;
+    }
+
+
+    #projects .education-title {
+
+        font-size:
+            40px;
+
+        margin-bottom:
+            45px;
+    }
+
+
+    .project-image {
+
+        height:
+            210px;
+    }
+
+
+    .project-content {
+
+        padding:
+            18px;
+    }
+
+}
+/* =========================================
+   INTERNSHIP SECTION
+   SAME THEME AS EDUCATION & PROJECTS
+========================================= */
+
+#internship.internship-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 110px 8% 100px;
+    margin: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.14),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+}
+/* =========================================
+   INTERNSHIP SECTION
+========================================= */
+
+.internship-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 110px 8% 100px;
+
+    /* EXACT SAME BACKGROUND AS EDUCATION */
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.14),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   INTERNSHIP TITLE
+   SAME AS EDUCATION
+========================================= */
+
+.internship-section .education-title {
+
+    color: var(--white);
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 700;
+
+    margin-bottom: 80px;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation:
+        educationGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.internship-timeline {
+
+    position: relative;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding-left: 45px;
+}
+
+
+/* Timeline vertical line */
+
+.internship-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #00a9f4,
+            #00a9f4,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px rgba(0, 169, 244, 0.45);
+}
+
+
+/* =========================================
+   INTERNSHIP ITEM
+========================================= */
+
+.internship-item {
+
+    position: relative;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.internship-dot {
+
+    position: absolute;
+
+    left: -45px;
+
+    top: 30px;
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #071522;
+
+    border: 3px solid #00a9f4;
+
+    box-shadow:
+        0 0 10px rgba(0, 169, 244, 0.8),
+        0 0 25px rgba(0, 169, 244, 0.35);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   INTERNSHIP CARD
+========================================= */
+
+.internship-card {
+
+    padding: 30px 35px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 30, 58, 0.95),
+            rgba(3, 19, 39, 0.95)
+        );
+
+    border:
+        1px solid rgba(20, 157, 255, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.internship-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(50, 178, 255, 0.9);
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.20),
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.internship-year {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    color: #42baff;
+
+    background:
+        rgba(0, 169, 244, 0.08);
+
+    border:
+        1px solid rgba(0, 169, 244, 0.25);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.internship-card h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--white);
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COMPANY
+========================================= */
+
+.internship-company {
+
+    color: #42baff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.internship-description {
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TECHNOLOGY TAGS
+========================================= */
+
+.internship-skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.internship-skills span {
+
+    padding: 6px 13px;
+
+    border-radius: 15px;
+
+    color: #42baff;
+
+    background:
+        rgba(0, 169, 244, 0.06);
+
+    border:
+        1px solid rgba(0, 169, 244, 0.25);
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+.internship-skills span:hover {
+
+    color: #ffffff;
+
+    background:
+        rgba(0, 169, 244, 0.15);
+
+    border-color:
+        #42baff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .internship-section {
+
+        padding: 80px 5%;
+    }
+
+
+    .internship-section .education-title {
+
+        font-size: 45px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .internship-timeline {
+
+        padding-left: 32px;
+    }
+
+
+    .internship-timeline::before {
+
+        left: 8px;
+    }
+
+
+    .internship-dot {
+
+        left: -32px;
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+
+    .internship-card {
+
+        padding: 24px 22px;
+    }
+
+
+    .internship-card h3 {
+
+        font-size: 21px;
+    }
+
+
+    .internship-description {
+
+        font-size: 14px;
+    }
+
+}
+/* =========================================
+   CERTIFICATES SECTION
+========================================= */
+
+#certificates.certificates-section {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 110px 8% 100px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.15),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 30% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto;
+}
+
+
+/* =========================================
+   CERTIFICATES TITLE
+========================================= */
+
+#certificates .education-title {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--white);
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 700;
+
+    margin-bottom: 80px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation:
+        educationGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+#certificates .education-title span {
+
+    color: var(--white);
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+}
+
+
+/* =========================================
+   CERTIFICATE CONTAINER
+========================================= */
+
+.certificates-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   CERTIFICATE CARD
+========================================= */
+
+.certificate-card {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(3, 19, 39, 0.55);
+
+    border:
+        1px solid rgba(20, 157, 255, 0.55);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   CERTIFICATE IMAGE
+========================================= */
+
+.certificate-card img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 245px;
+
+    object-fit: contain;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* =========================================
+   FIRST CERTIFICATE - BIGGER
+========================================= */
+
+.certificates-container .certificate-card:first-child {
+
+    transform:
+        scale(1.15);
+
+    z-index: 5;
+}
+
+
+.certificates-container .certificate-card:first-child img {
+
+    height: 300px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.certificate-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0, 150, 255, 0.9);
+
+    box-shadow:
+
+        0 0 20px rgba(0, 119, 255, 0.25),
+
+        0 0 45px rgba(0, 119, 255, 0.12),
+
+        0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* First card hover */
+
+.certificates-container .certificate-card:first-child:hover {
+
+    transform:
+        scale(1.15)
+        translateY(-10px);
+}
+
+
+.certificate-card:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    #certificates.certificates-section {
+
+        padding:
+            100px 6% 80px;
+    }
+
+    .certificates-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+    .certificates-container .certificate-card:first-child {
+
+        transform:
+            scale(1.08);
+    }
+
+    .certificates-container .certificate-card:first-child:hover {
+
+        transform:
+            scale(1.08)
+            translateY(-10px);
+    }
+
+    .certificates-container .certificate-card:first-child img {
+
+        height: 280px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    #certificates.certificates-section {
+
+        padding:
+            90px 5% 70px;
+    }
+
+    #certificates .education-title {
+
+        font-size:
+            clamp(40px, 12vw, 55px);
+
+        margin-bottom:
+            55px;
+    }
+
+    .certificates-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+    }
+
+    .certificate-card img {
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    .certificates-container .certificate-card:first-child {
+
+        transform:
+            scale(1);
+    }
+
+    .certificates-container .certificate-card:first-child:hover {
+
+        transform:
+            translateY(-10px);
+    }
+
+    .certificates-container .certificate-card:first-child img {
+
+        height: auto;
+    }
+}
+
+/* =========================================
+   CERTIFICATES SLIDER
+========================================= */
+
+#certificates.certificates-section {
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 110px 8% 100px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.15),
+            transparent 32%
+        ),
+        var(--bg);
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto;
+}
+
+
+/* Certificate Heading */
+
+#certificates .education-title {
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+    color: var(--white);
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35);
+}
+
+
+/* Slider Main Area */
+
+.certificates-slider {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* Visible Window */
+
+.certificates-viewport {
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.certificates-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Cards Track */
+
+.certificates-container {
+
+    display: flex;
+
+    width: 100%;
+
+    gap: 25px;
+
+    align-items: stretch;
+
+    padding: 15px 5px 25px;
+
+    max-width: none;
+    margin: 0;
+}
+
+
+/* Individual Certificate Card */
+
+#certificates .certificate-card {
+
+    flex: 0 0 calc((100% - 50px) / 3);
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(7, 24, 39, 0.85);
+
+    border: 1px solid rgba(0, 169, 244, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(0, 119, 255, 0.08);
+
+    scroll-snap-align: start;
+
+    transform: none;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Certificate Images */
+
+#certificates .certificate-card img {
+
+    display: block;
+
+    width: 100%;
+    height: 245px;
+
+    padding: 12px;
+
+    object-fit: contain;
+
+    background: transparent;
+}
+
+
+/* Remove Old First Card Special Effect */
+
+#certificates .certificates-container .certificate-card:first-child {
+
+    transform: none;
+
+    z-index: auto;
+}
+
+#certificates .certificates-container .certificate-card:first-child img {
+
+    height: 245px;
+}
+
+
+/* Hover Effect */
+
+#certificates .certificate-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--blue-light);
+
+    box-shadow:
+        0 0 20px rgba(0, 169, 244, 0.25),
+        0 0 40px rgba(0, 119, 255, 0.15);
+}
+
+
+/* Slider Arrow Buttons */
+
+.certificate-arrow {
+
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0, 169, 244, 0.7);
+
+    background: rgba(0, 119, 255, 0.12);
+
+    color: var(--blue-light);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    z-index: 5;
+}
+
+
+.certificate-arrow:hover:not(:disabled) {
+
+    color: #001018;
+
+    background: var(--blue-light);
+
+    box-shadow:
+        0 0 20px rgba(0, 169, 244, 0.4);
+
+    transform: scale(1.08);
+}
+
+
+.certificate-arrow:disabled {
+
+    opacity: 0.3;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    #certificates.certificates-section {
+        padding: 100px 5% 80px;
+    }
+
+    #certificates .certificate-card {
+        flex: 0 0 calc((100% - 25px) / 2);
+    }
+
+    #certificates .certificate-card img {
+        height: 230px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    #certificates.certificates-section {
+        padding: 90px 5% 70px;
+    }
+
+    #certificates .education-title {
+        margin-bottom: 45px;
+    }
+
+    .certificates-slider {
+        gap: 10px;
+    }
+
+    .certificate-arrow {
+        flex: 0 0 36px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+    .certificates-container {
+        gap: 15px;
+    }
+
+    #certificates .certificate-card {
+        flex: 0 0 100%;
+    }
+
+    #certificates .certificate-card img {
+        height: 230px;
+    }
+
+}
+
+/* =====================================================
+   FINAL CERTIFICATES TRAIN CAROUSEL
+   This block overrides the older certificate grid/slider
+   rules above without changing the other portfolio areas.
+===================================================== */
+
+#certificates.certificates-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 110px 5% 100px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#certificates .education-title {
+    margin-bottom: 65px;
+}
+
+/* The viewport clips the moving row */
+#certificates .certificates-viewport {
+    display: block;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden !important;
+    position: relative;
+    padding: 22px 0 35px;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+/* Two identical sets move together like a train */
+#certificates .certificates-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content !important;
+    max-width: none !important;
+    gap: 30px !important;
+    margin: 0 !important;
+    padding: 15px 0 25px !important;
+    animation: certificateTrainMove 38s linear infinite;
+    will-change: transform;
+}
+
+#certificates .certificate-card {
+    display: flex;
+    flex: 0 0 410px !important;
+    width: 410px !important;
+    min-width: 410px !important;
+    height: 340px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(20, 157, 255, 0.65);
+    border-radius: 22px;
+    background: rgba(3, 19, 39, 0.78);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+                0 0 18px rgba(0, 119, 255, 0.10);
+    transform: none !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#certificates .certificate-card img {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    padding: 14px;
+    object-fit: contain !important;
+    background: transparent;
+    transform: none !important;
+}
+
+#certificates .certificate-card:hover {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 22px rgba(0, 169, 244, 0.28),
+                0 0 42px rgba(0, 119, 255, 0.16);
+}
+
+/* Five cards + five duplicated cards: move exactly one set width.
+   The +15px compensates for half of the 30px inter-card gap. */
+@keyframes certificateTrainMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-50% + 15px)); }
+}
+
+/* Pause while the visitor hovers over the certificates */
+#certificates .certificates-viewport:hover .certificates-container {
+    animation-play-state: paused;
+}
+
+/* The train layout does not use arrow controls */
+#certificates .certificate-arrow,
+#certificates .certificates-slider .certificate-arrow {
+    display: none !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #certificates.certificates-section {
+        padding: 100px 4% 80px;
+    }
+
+    #certificates .certificate-card {
+        flex-basis: 350px !important;
+        width: 350px !important;
+        min-width: 350px !important;
+        height: 300px;
+    }
+
+    #certificates .certificates-container {
+        gap: 24px !important;
+        animation-duration: 32s;
+    }
+
+    @keyframes certificateTrainMove {
+        from { transform: translateX(0); }
+        to   { transform: translateX(calc(-50% + 12px)); }
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    #certificates.certificates-section {
+        min-height: auto;
+        padding: 85px 4% 65px;
+    }
+
+    #certificates .education-title {
+        font-size: clamp(38px, 10vw, 52px);
+        margin-bottom: 38px;
+    }
+
+    #certificates .certificate-card {
+        flex-basis: 285px !important;
+        width: 285px !important;
+        min-width: 285px !important;
+        height: 245px;
+        border-radius: 18px;
+    }
+
+    #certificates .certificate-card img {
+        padding: 10px;
+    }
+
+    #certificates .certificates-container {
+        gap: 18px !important;
+        animation-duration: 27s;
+    }
+
+    @keyframes certificateTrainMove {
+        from { transform: translateX(0); }
+        to   { transform: translateX(calc(-50% + 9px)); }
+    }
+}
+
+/* Respect reduced-motion accessibility setting */
+@media (prefers-reduced-motion: reduce) {
+    #certificates .certificates-container {
+        animation: none !important;
+    }
+}
+
+/* =========================================
+   FINAL CERTIFICATE DESIGN
+   MATCH ORIGINAL PORTFOLIO THEME
+========================================= */
+
+/* Same background as the rest of portfolio */
+
+#certificates.certificates-section {
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.15),
+            transparent 32%
+        ),
+        var(--bg) !important;
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto;
+
+    min-height: 100vh;
+    padding: 110px 5% 100px;
+    overflow: hidden;
+}
+
+/* Heading */
+
+#certificates .education-title {
+    color: var(--white);
+    text-align: center;
+    font-size: clamp(45px, 5vw, 70px);
+    margin-bottom: 65px;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35);
+}
+
+/* Sliding window */
+
+#certificates .certificates-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 25px 0 35px;
+}
+
+/* Moving train */
+
+#certificates .certificates-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    max-width: none !important;
+
+    gap: 35px !important;
+    padding: 15px 0 !important;
+    margin: 0 !important;
+
+    animation: certificateTrain 32s linear infinite;
+    will-change: transform;
+}
+
+/* BIG CERTIFICATE CARDS */
+
+#certificates .certificate-card {
+    flex: 0 0 560px !important;
+    width: 560px !important;
+    height: 420px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    background: var(--panel) !important;
+
+    border: 1px solid rgba(0, 169, 244, 0.55);
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 15px rgba(0, 169, 244, 0.10),
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transform: none !important;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Larger certificate images */
+
+#certificates .certificate-card img {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+
+    padding: 0 !important;
+
+    background: transparent;
+}
+
+/* Glow on hover */
+
+#certificates .certificate-card:hover {
+    border-color: var(--blue-light);
+
+    box-shadow:
+        0 0 20px rgba(0, 169, 244, 0.3),
+        0 0 45px rgba(0, 119, 255, 0.15);
+}
+
+/* Continuous movement */
+
+@keyframes certificateTrain {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+
+#certificates .certificates-viewport:hover
+.certificates-container {
+    animation-play-state: paused;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    #certificates .certificate-card {
+        flex-basis: 430px !important;
+        width: 430px !important;
+        height: 340px !important;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    #certificates.certificates-section {
+        padding: 90px 5% 70px;
+    }
+
+    #certificates .certificate-card {
+        flex-basis: 310px !important;
+        width: 310px !important;
+        height: 260px !important;
+    }
+
+    #certificates .certificates-container {
+        gap: 20px !important;
+    }
+
+}
+
+/* CERTIFICATES HEADING - INTERNSHIP STYLE GLOW */
+
+#certificates .education-title {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(45px, 5vw, 70px);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: var(--white);
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation: certificateHeadingGlow 2.5s ease-in-out infinite;
+}
+
+#certificates .education-title span {
+    color: var(--white);
+}
+
+@keyframes certificateHeadingGlow {
+    0%, 100% {
+        text-shadow:
+            0 0 10px rgba(0, 169, 244, 0.65),
+            0 0 25px rgba(0, 169, 244, 0.35),
+            0 0 45px rgba(0, 169, 244, 0.18);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px rgba(0, 169, 244, 0.9),
+            0 0 35px rgba(0, 169, 244, 0.6),
+            0 0 65px rgba(0, 169, 244, 0.4);
+    }
+}
+
+/* MATCH CERTIFICATES BACKGROUND WITH INTERNSHIP */
+
+#certificates.certificates-section {
+    background:
+        linear-gradient(
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 169, 244, 0.025) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(25, 132, 255, 0.14),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(0, 169, 244, 0.05),
+            transparent 30%
+        ),
+        var(--bg) !important;
+
+    background-size:
+        55px 55px,
+        55px 55px,
+        auto,
+        auto,
+        auto !important;
+}
+
+
+/* =========================================
+   CERTIFICATES - EXACT INTERNSHIP HEADING STYLE
+========================================= */
+
+#certificates .education-title {
+    position: relative;
+    z-index: 2;
+
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: clamp(45px, 5vw, 70px);
+    font-weight: 700;
+    margin-bottom: 70px;
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation: educationGlow 2.5s ease-in-out infinite !important;
+}
+
+/* Apply animation directly to visible heading text */
+
+#certificates .education-title span {
+    color: var(--white);
+
+    text-shadow:
+        0 0 10px rgba(0, 169, 244, 0.65),
+        0 0 25px rgba(0, 169, 244, 0.35),
+        0 0 45px rgba(0, 169, 244, 0.18);
+
+    animation: educationGlow 2.5s ease-in-out infinite !important;
+    display: inline-block;
+}
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(0, 169, 244, 0.5);
+    border-radius: 8px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--blue);
+    border-radius: 5px;
+    box-shadow: 0 0 8px var(--blue);
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul#navMenu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        padding: 12px 18px;
+
+        background: var(--panel);
+        border: 1px solid rgba(0, 169, 244, 0.35);
+        border-radius: 12px;
+
+        box-shadow: 0 0 25px rgba(0, 169, 244, 0.15);
+    }
+
+    nav ul#navMenu.is-open {
+        display: flex;
+    }
+
+    nav ul#navMenu li a {
+        display: block;
+        padding: 13px 5px;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Preserve hover effect on skill cards */
+
+.skill-card.reveal.active:hover {
+    transform: translateY(-10px);
+}
+
+/* Preserve hover effect on project cards */
+
+.project-card.reveal.active:hover {
+    transform: translateY(-6px);
+}
